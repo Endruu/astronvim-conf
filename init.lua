@@ -17,9 +17,6 @@ return {
     },
   },
 
-  -- Set colorscheme to use
-  colorscheme = "catppuccin",
-
   -- add new user interface icon
   icons = {
     VimIcon = "",
