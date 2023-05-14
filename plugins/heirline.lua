@@ -82,7 +82,7 @@ return
       },
       -- the final component of the NvChad statusline is the navigation section
       -- this is very similar to the previous current working directory section with the icon
-      {     -- make nav section with icon border
+      { -- make nav section with icon border
         -- define a custom component with just a file icon
         status.component.builder {
           { provider = require("astronvim.utils").get_icon "ScrollText" },
@@ -94,12 +94,12 @@ return
           -- as well as the color to the left of the separator
           surround = { separator = "right", color = { main = "nav_icon_bg", left = "file_info_bg" } },
         },
-        -- add a navigation component and just display the percentage of progress in the file
+        -- add a navigation component and just display the location in the file
         status.component.nav {
           -- add some padding for the percentage provider
-          percentage = { padding = { right = 1 } },
+          ruler = { padding = { right = 1 } },
           -- disable all other providers
-          ruler = false,
+          percentage = false,
           scrollbar = false,
           -- use no separator and define the background color
           surround = { separator = "none", color = "file_info_bg" },
